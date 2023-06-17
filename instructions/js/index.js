@@ -18,14 +18,17 @@ for(let i = 0; i < skills.length; i++){
 const messageForm = document.getElementsByName('leave_message')[0];
    messageForm.addEventListener ('submit', (e)=>{
     e.preventDefault();
-   const usersName = e.target.usersName;
-   const usersEmail = e.target.usersEmail;
-   const usersMessage = e.target.usersMessage;
+   const usersName = e.target.usersName.value;
+   const usersEmail = e.target.usersEmail.value;
+   const usersMessage = e.target.usersMessage.value;
+   
+   messageForm.reset();
+
    const messageSection = document.getElementById('messages');
    let messageList = messageSection.querySelector('ul');
    let newMessage = document.createElement('li');
-   newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a>
-   <span>${usersMessage}</span>`;
+   newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a> 
+   wrote: <span>${usersMessage} </span>`;
 
    const removeButton = document.createElement('button');
    removeButton.textContent = 'remove';
@@ -33,8 +36,8 @@ const messageForm = document.getElementsByName('leave_message')[0];
    removeButton.addEventListener('click', function() {
    const entry = removeButton.parentNode;
    entry.remove();
+   });
    newMessage.appendChild(removeButton);
    messageList.appendChild(newMessage);
-   });
-   messageForm.reset();
+   
 });
