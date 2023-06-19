@@ -21,8 +21,6 @@ const messageForm = document.getElementsByName('leave_message')[0];
    const usersName = e.target.usersName.value;
    const usersEmail = e.target.usersEmail.value;
    const usersMessage = e.target.usersMessage.value;
-   
-   messageForm.reset();
 
    const messageSection = document.getElementById('messages');
    let messageList = messageSection.querySelector('ul');
@@ -39,5 +37,5 @@ const messageForm = document.getElementsByName('leave_message')[0];
    });
    newMessage.appendChild(removeButton);
    messageList.appendChild(newMessage);
-   
+   messageForm.reset();
 });
