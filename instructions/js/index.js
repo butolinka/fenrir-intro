@@ -22,22 +22,23 @@ const messageForm = document.getElementsByName('leave_message')[0];
    const usersEmail = e.target.usersEmail.value;
    const usersMessage = e.target.usersMessage.value;
    
-   messageForm.reset();
+   
 
    const messageSection = document.getElementById('messages');
-   let messageList = messageSection.querySelector('ul');
-   let newMessage = document.createElement('li');
+   const messageList = messageSection.querySelector('ul');
+   const newMessage = document.createElement('li');
    newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a> 
    wrote: <span>${usersMessage} </span>`;
 
    const removeButton = document.createElement('button');
    removeButton.textContent = 'remove';
    removeButton.setAttribute('type', 'button');
-   removeButton.addEventListener('click', function() {
+   removeButton.addEventListener('click', (e) => {
+   e.preventDefault();
    const entry = removeButton.parentNode;
    entry.remove();
    });
    newMessage.appendChild(removeButton);
    messageList.appendChild(newMessage);
-   
+   messageForm.reset();
 });
