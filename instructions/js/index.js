@@ -34,7 +34,6 @@ const messageForm = document.getElementsByName('leave_message')[0];
    removeButton.textContent = 'remove';
    removeButton.setAttribute('type', 'button');
    removeButton.addEventListener('click', (e) => {
-   e.preventDefault();
    const entry = removeButton.parentNode;
    entry.remove();
    });
