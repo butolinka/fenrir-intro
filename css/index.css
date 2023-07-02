@@ -1,0 +1,74 @@
+body{
+    background-color: #FEF7DC;
+    color: #A19882;
+}
+.header{
+    text-align: center;
+
+}
+h1, h2{
+    font-family: 'Nova Mono', monospace;
+}
+p, li{
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+section{
+    background-color: #E6DDC6;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin: auto auto 10px;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #4C4C6D;
+}
+.text-about{
+    text-align: center;
+}
+li{
+    list-style: url(/fenrir-intro/arrow.png);
+    text-align: left;
+}
+
+label{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    justify-self: center;
+}
+button{
+    margin-left: 25%;
+    margin-top: 10px;
+    color: #FEF7DC;
+    font-family: 'Nova Mono', monospace;
+    background-color: #C2B8A3;
+    width: 50%;
+    height: 2rem;
+    border: none;
+    cursor: pointer;
+}
+input{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+}
+form{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    background-color: #C2B8A3;
+    color: #FEF7DC;
+    width: 78%;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+}

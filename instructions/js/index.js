@@ -16,7 +16,11 @@ for(let i = 0; i < skills.length; i++){
 }
 
 const messageForm = document.getElementsByName('leave_message')[0];
+<<<<<<< HEAD
 messageForm.addEventListener ('submit', (e)=>{
+=======
+    messageForm.addEventListener ('submit', (e)=>{
+>>>>>>> fd696f316b749c3b3b0679f38d4350d7c1b4b810
     e.preventDefault();
     const usersName = e.target.usersName.value;
     const usersEmail = e.target.usersEmail.value;
@@ -32,9 +36,15 @@ messageForm.addEventListener ('submit', (e)=>{
     const removeButton = document.createElement('button');
     removeButton.textContent = 'remove';
     removeButton.setAttribute('type', 'button');
+<<<<<<< HEAD
     removeButton.addEventListener('click', () => {
         const entry = removeButton.parentNode;
         entry.remove();
+=======
+    removeButton.addEventListener('click', (e) => {
+    const entry = removeButton.parentNode;
+    entry.remove();
+>>>>>>> fd696f316b749c3b3b0679f38d4350d7c1b4b810
     });
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
