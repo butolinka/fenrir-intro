@@ -1,10 +1,21 @@
-body{
-    background-color: #FEF7DC;
-    color: #A19882;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+body{
+    background-color: #FAD586;
+    color: #fdf0d5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
 .header{
     text-align: center;
-
+    color: #282846;
 }
 h1, h2{
     font-family: 'Nova Mono', monospace;
@@ -14,25 +25,25 @@ p, li{
     font-weight: bolder;
 }
 section{
-    background-color: #E6DDC6;
-    width: 75%;
+    background-color: #184D47;
+    width: 55rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    padding: 25px;
     margin: auto auto 10px;
 }
 
 a{
     text-decoration: none;
     cursor: pointer;
-    color: #4C4C6D;
+    color: #96BB7C;
 }
 .text-about{
     text-align: center;
 }
-li{
-    list-style: url(/fenrir-intro/arrow.png);
+.messageList, .experience-item, .link-item, .skillItem{
+    list-style: circle inside;
     text-align: left;
 }
 
@@ -41,34 +52,183 @@ label{
     font-size: 20px;
     text-align: center;
     justify-self: center;
+    padding: 10px;
 }
 button{
-    margin-left: 25%;
-    margin-top: 10px;
-    color: #FEF7DC;
+    margin: 10px auto 10px auto;
+    color: #282846;
     font-family: 'Nova Mono', monospace;
-    background-color: #C2B8A3;
-    width: 50%;
+    background-color: #C64756;
+    width: 15rem;
     height: 2rem;
     border: none;
     cursor: pointer;
 }
-input{
-    width: 100%;
+input, textarea{
+    width: 20rem;
+    background-color: #EAFFD0;
 }
-textarea{
-    width: 100%;
+input{
+    height: 2.5rem;
+    padding: 15px;
 }
 form{
-    width: 35%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 footer{
-    background-color: #C2B8A3;
-    color: #FEF7DC;
-    width: 78%;
+    background-color: #96BB7C;
+    color: #007580;
+    width: 100%;
     text-align: center;
-    margin: auto;
     padding: 5px;
+    margin: 0 auto;
+}
+.nav-item{
+    list-style: none;
+    margin-right: 20px;
+    padding: 10px;
+}
+.nav-list{
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar{
+	position: sticky;
+    background-color: #96BB7C;
+    width: 100%;
+    top: 0;
+}
+.nav-link{
+    color: #007580;
+    padding: 10px;
+}
+.first-container{
+    display: flex;
+    margin: auto auto 10px;
+    justify-content: center;
+}
+#experience, #skills{
+    width: 27.3rem;
+    margin: 3px;
+}
+.head-picture{
+    margin: 20px auto 20px auto;
+    border-radius: 50%;
+}
+.experience-item{
+    display: flex;
+    text-align: end;
+}
+span{
+    margin: 3px;
+    text-align: start;
+}
+
+@media (max-width: 411px){
+    section{
+    width: 20rem;
+    padding: 15px;
+    margin: auto auto 5px;
+    }
+    .first-container{
+    flex-direction: column;
+    margin: auto auto 10px;
+    }
+    #experience, #skills{
+    width: 20rem;
+    padding: 15px;
+    margin: auto auto 5px;
+    }
+    input, textarea{
+        width: 15rem;
+        margin: 2px auto 2px auto;
+    }
+    button{
+        margin: 7px auto 3px auto;
+        width: 9rem;
+    }
+    .nav-item{
+        margin-bottom: 4px;
+        margin-right: 0;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width: 412px) and (max-width: 714px) {
+    section{
+    width: 20rem;
+    padding: 15px;
+    margin: auto auto 5px;
+    }
+    .first-container{
+    flex-direction: column;
+    margin: auto auto 10px;
+    }
+    #experience, #skills{
+    width: 20rem;
+    padding: 15px;
+    margin: auto auto 5px;
+    }
+    input, textarea{
+        width: 15rem;
+        margin: 2px auto 2px auto;
+        padding: 3px;
+    }
+    form{
+        padding: 5px;
+    }
+    button{
+        margin: 7px auto 3px auto;
+        width: 11rem;
+    }
+    .nav-item{
+        margin-bottom: 4px;
+        margin-right: 0;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width: 715px) and (max-width: 980px) {
+    section{
+    width: 30rem;
+    padding: 15px;
+    margin: auto auto 5px;
+    }
+    .first-container{
+    flex-direction: column;
+    margin: auto auto 10px;
+    }
+    #experience, #skills{
+    width: 30rem;
+    padding: 15px;
+    margin: auto auto 5px;
+    }
+    input, textarea{
+        width: 25rem;
+        margin: 2px auto 2px auto;
+    }
+    button{
+        margin: 7px auto 3px auto;
+        width: 12rem;
+    }
+    .nav-item{
+        margin-bottom: 4px;
+        margin-right: 0;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

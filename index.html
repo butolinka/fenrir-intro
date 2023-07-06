@@ -11,63 +11,61 @@
     <title>MB</title>
 </head>
 <body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
+            <li class="nav-item"><a href="#experience" class="nav-link">EXPERIENCE</a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link">SKILLS</a></li>
+            <li class="nav-item"><a href="#connect" class="nav-link">CONNECT</a></li>
+            <li class="nav-item"><a href="#form" class="nav-link">MESSAGING</a></li>
+        </ul>
+    </nav>
     <h1 class="header">Mariia Butolina</h1>
-    <section>
-    <h1>About:</h1>
-<<<<<<< HEAD
+    <img class="head-picture" src="https://images.unsplash.com/photo-1485856407642-7f9ba0268b51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjYxfHxjb2RlfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" width="250px" alt="laptop">
+    <section id="about">
+    <h1 >About:</h1>
     <p>I was born and raised in ST.Peterburg, Russia. In 2018 I moved to the USA. I have a 4 y.o daughter.
         I started study web development in 2021. In addition, at the moment I study Criminal Justice at Tidewater Community College. 
-=======
-    <p class="text-about">I was born and raised in ST.Peterburg, Russia. In 2018 I moved to the USA. I have a 4 y.o daughter.
-    I started study web development in 2021. In addition, at the moment I study Criminal Justice at Tidewater Community College. 
->>>>>>> fd696f316b749c3b3b0679f38d4350d7c1b4b810
     </p>
     </section>
-    <section>
-    <h1>Experience:</h1>
-    <ul class="experience-list">
-        <li>2007-2009: Shop assistant</li>
-        <li>2009-2010: Accountant</li>
-        <li>2011-2018: Economist</li>
-        <li>2021-2023: Student</li>
-    </ul>
-    </section>
-    <section id="skills">
-        <h2 >Skills:</h2>
-        <ul class="skills-list" ></ul>
-    </section>
-    <section>
+    <div class="first-container">
+        <section id="experience">
+        <h1>Experience:</h1>
+        <ul class="experience-list">
+            <li class="experience-item"><span>2007-2009: </span><span>Shop assistant</span></li>
+            <li class="experience-item"><span>2009-2010: </span><span>Accountant</span></li>
+            <li class="experience-item"><span>2011-2018: </span><span>Economist</span></li>
+            <li class="experience-item"><span>2021-2023: </span><span>Student</span></li>
+        </ul>
+        </section>
+        <section id="skills">
+            <h2 >Skills:</h2>
+            <ul class="skills-list" ></ul>
+        </section>
+    </div>
+    <section id="connect">
         <h1>Connect:</h1>
     <ul>
-        <li><a href="https://github.com/butolinka" target="_blank">GitHub</a></li>
-        <li><a href="mailto:butolinkam@gmail.com" target="_blank">Gmail</a></li>
-        <li><a href="https://t.me/Butolinka" target="_blank">Telegram</a></li>
+        <li class="link-item"><a href="https://github.com/butolinka" target="_blank">GitHub</a></li>
+        <li class="link-item"><a href="mailto:butolinkam@gmail.com" target="_blank">Gmail</a></li>
+        <li class="link-item"><a href="https://t.me/Butolinka" target="_blank">Telegram</a></li>
     </ul>
     </section>
-    <section>
+    <section id="form">
         <h2>Leave a Message</h2>
         <form name="leave_message">
-<<<<<<< HEAD
             <label for="usersName">Your Name</label><br>
-            <input type="text" name="usersName" required /> <br>
+            <input type="text" id="usersName" name="usersName" required /> <br>
             <label for="usersEmail">Your Email</label><br>
-            <input type="email" name="usersEmail" required /><br>
+            <input type="email" id="usersEmail" name="usersEmail" required /><br>
             <label for="usersMessage">Your Message</label><br>
-            <textarea name = "usersMessage" required = "true"></textarea><br>
-=======
-            <label for="usersName">Your Name</label>
-            <input type="text" name="usersName" required="true">
-            <label for="usersEmail">Your Email</label>
-            <input type="email" name="usersEmail" required="true">
-            <label for="usersMessage">Your Message</label>
-            <textarea name = "usersMessage" required="true"></textarea>
->>>>>>> fd696f316b749c3b3b0679f38d4350d7c1b4b810
+            <textarea name = "usersMessage" id="usersMessage" required = "true"></textarea><br>
             <button type="submit">Submit</button>
         </form>
     </section>
     <section id="messages">
         <h2>Messages</h2>
-        <ul></ul>
+        <ul class="messages"></ul>
     </section>
     <footer></footer>
     <script src="instructions/js/index.js"></script>
