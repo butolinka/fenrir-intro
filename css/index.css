@@ -68,6 +68,10 @@ input, textarea{
     width: 20rem;
     background-color: #EAFFD0;
 }
+input{
+    height: 2.5rem;
+    padding: 15px;
+}
 form{
     display: flex;
     flex-direction: column;
@@ -84,6 +88,7 @@ footer{
 .nav-item{
     list-style: none;
     margin-right: 20px;
+    padding: 10px;
 }
 .nav-list{
     display: flex;
@@ -97,6 +102,7 @@ footer{
 }
 .nav-link{
     color: #007580;
+    padding: 10px;
 }
 .first-container{
     display: flex;
@@ -111,10 +117,18 @@ footer{
     margin: 20px auto 20px auto;
     border-radius: 50%;
 }
+.experience-item{
+    display: flex;
+    text-align: end;
+}
+span{
+    margin: 3px;
+    text-align: start;
+}
 
-@media (min-width: 320px) and (max-width: 411px){
+@media (max-width: 411px){
     section{
-    width: 15rem;
+    width: 20rem;
     padding: 15px;
     margin: auto auto 5px;
     }
@@ -128,15 +142,16 @@ footer{
     margin: auto auto 5px;
     }
     input, textarea{
-        width: 10rem;
+        width: 15rem;
         margin: 2px auto 2px auto;
     }
     button{
         margin: 7px auto 3px auto;
-        width: 5rem;
+        width: 9rem;
     }
     .nav-item{
         margin-bottom: 4px;
+        margin-right: 0;
     }
     .nav-list{
         display: flex;
@@ -161,15 +176,16 @@ footer{
     margin: auto auto 5px;
     }
     input, textarea{
-        width: 13rem;
+        width: 18rem;
         margin: 2px auto 2px auto;
     }
     button{
         margin: 7px auto 3px auto;
-        width: 7rem;
+        width: 11rem;
     }
     .nav-item{
         margin-bottom: 4px;
+        margin-right: 0;
     }
     .nav-list{
         display: flex;
@@ -203,6 +219,7 @@ footer{
     }
     .nav-item{
         margin-bottom: 4px;
+        margin-right: 0;
     }
     .nav-list{
         display: flex;
