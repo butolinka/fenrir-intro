@@ -80,7 +80,7 @@ form{
 footer{
     background-color: #96BB7C;
     color: #007580;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     padding: 5px;
     margin: 0 auto;
@@ -97,7 +97,7 @@ footer{
 .navbar{
 	position: sticky;
     background-color: #96BB7C;
-    width: 100vw;
+    width: 100%;
     top: 0;
 }
 .nav-link{
@@ -137,7 +137,7 @@ span{
     margin: auto auto 10px;
     }
     #experience, #skills{
-    width: 15rem;
+    width: 20rem;
     padding: 15px;
     margin: auto auto 5px;
     }
@@ -162,7 +162,7 @@ span{
 }
 @media (min-width: 412px) and (max-width: 714px) {
     section{
-    width: 18rem;
+    width: 20rem;
     padding: 15px;
     margin: auto auto 5px;
     }
@@ -171,13 +171,17 @@ span{
     margin: auto auto 10px;
     }
     #experience, #skills{
-    width: 18rem;
+    width: 20rem;
     padding: 15px;
     margin: auto auto 5px;
     }
     input, textarea{
-        width: 18rem;
+        width: 15rem;
         margin: 2px auto 2px auto;
+        padding: 3px;
+    }
+    form{
+        padding: 5px;
     }
     button{
         margin: 7px auto 3px auto;
