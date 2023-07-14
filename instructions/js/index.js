@@ -42,3 +42,21 @@ messageForm.addEventListener ('submit', (e)=>{
     messageList.appendChild(newMessage);
     messageForm.reset();
 });
+
+const githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/butolinka/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', ()=>{
+    const repositories = JSON.parse(githubRequest.response);
+    console.log(repositories);
+    const projectSection= document.getElementById('projects');
+    const progectList = projectSection.querySelector('ul');
+    for(let i = 0; i < repositories.length; i+=1){
+        const project = document.createElement('li');
+        project.classList.add('project');
+        const repositoryName = repositories[i].name;
+        const capitilizeRepositoryName = repositoryName.charAt(0).toUpperCase() + repositoryName.slice(1);
+        project.innerHTML='<a href="'+ repositories[i].html_url +'"target="_blank">' + capitilizeRepositoryName +'</a>';
+        progectList.appendChild(project);
+    }
+});
