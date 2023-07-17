@@ -5,7 +5,7 @@ const copyright = document.createElement('p');
 copyright.textContent= `\u00A9 Mariia ${thisYear}`;
 footer.appendChild(copyright);
 
-const skills = ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript'];
+const skills = ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'API','GSAP'];
 const skillsSection = document.querySelector('#skills');
 const skillList = skillsSection.querySelector('ul');
 
@@ -43,12 +43,13 @@ messageForm.addEventListener ('submit', (e)=>{
     messageForm.reset();
 });
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/butolinka/repos');
-githubRequest.send();
-githubRequest.addEventListener('load', ()=>{
-    const repositories = JSON.parse(githubRequest.response);
-    const projectSection= document.getElementById('projects');
+
+fetch('https://api.github.com/users/butolinka/repos')
+.then(response =>response.json())
+.then(data => githubRepositories(data))
+.catch(error => alert("Error in loading data. Try again later.", error))
+function githubRepositories(repositories){
+    const projectSection = document.getElementById('projects');
     const progectList = projectSection.querySelector('ul');
     for(let i = 0; i < repositories.length; i+=1){
         const project = document.createElement('li');
@@ -58,4 +59,4 @@ githubRequest.addEventListener('load', ()=>{
         project.innerHTML='<a href="'+ repositories[i].html_url +'"target="_blank">' + capitilizeRepositoryName +'</a>';
         progectList.appendChild(project);
     }
-});
+}
