@@ -48,7 +48,6 @@ githubRequest.open('GET', 'https://api.github.com/users/butolinka/repos');
 githubRequest.send();
 githubRequest.addEventListener('load', ()=>{
     const repositories = JSON.parse(githubRequest.response);
-    console.log(repositories);
     const projectSection= document.getElementById('projects');
     const progectList = projectSection.querySelector('ul');
     for(let i = 0; i < repositories.length; i+=1){
