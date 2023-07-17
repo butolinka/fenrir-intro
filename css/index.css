@@ -125,7 +125,24 @@ span{
     margin: 3px;
     text-align: start;
 }
-
+.project-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 20rem;
+    align-content: space-around;
+}
+.project{
+    text-align: left;
+    padding: 0.5rem;
+    list-style: none;
+}
+.connect-list{
+    display: flex;
+}
+.link-item{
+    margin: 1rem;
+}
 @media (max-width: 411px){
     section{
     width: 20rem;
@@ -158,6 +175,12 @@ span{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .project-list{
+    height: auto;
+    }
+    .connect-list{
+        flex-direction: column;
     }
 }
 @media (min-width: 412px) and (max-width: 714px) {
@@ -197,6 +220,12 @@ span{
         justify-content: center;
         align-items: center;
     }
+    .project-list{
+        height: auto;
+        }
+        .connect-list{
+            flex-direction: column;
+        }
 }
 @media (min-width: 715px) and (max-width: 980px) {
     section{
@@ -231,4 +260,7 @@ span{
         justify-content: center;
         align-items: center;
     }
+    .project-list{
+        height: 35rem;
+        }
 }
