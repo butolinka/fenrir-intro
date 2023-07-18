@@ -92,13 +92,18 @@ footer{
 }
 .nav-list{
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+
 }
 .navbar{
 	position: sticky;
     background-color: #96BB7C;
     width: 100%;
     top: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .nav-link{
     color: #007580;
@@ -143,6 +148,16 @@ span{
 .link-item{
     margin: 1rem;
 }
+.logo{
+    font-family: 'Nova Mono', monospace;
+    color:  #007580;
+    font-size: 2.5rem;
+    padding-left: 20px;
+}
+.error{
+    text-align: center;
+    margin: auto;
+}
 @media (max-width: 411px){
     section{
     width: 20rem;
@@ -174,13 +189,20 @@ span{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
     .project-list{
     height: auto;
     }
     .connect-list{
         flex-direction: column;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo{
+        padding-left: 15px;
     }
 }
 @media (min-width: 412px) and (max-width: 714px) {
@@ -218,13 +240,19 @@ span{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: start;
     }
     .project-list{
         height: auto;
         }
         .connect-list{
             flex-direction: column;
+        }
+        .logo{
+            align-self: center;
+            font-size: 4rem;
+            margin-left: auto;
+            margin-right: auto;
         }
 }
 @media (min-width: 715px) and (max-width: 980px) {
@@ -253,12 +281,6 @@ span{
     .nav-item{
         margin-bottom: 4px;
         margin-right: 0;
-    }
-    .nav-list{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
     .project-list{
         height: 35rem;

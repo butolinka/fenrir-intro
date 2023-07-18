@@ -5,7 +5,7 @@ const copyright = document.createElement('p');
 copyright.textContent= `\u00A9 Mariia ${thisYear}`;
 footer.appendChild(copyright);
 
-const skills = ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript'];
+const skills = ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'API','GSAP'];
 const skillsSection = document.querySelector('#skills');
 const skillList = skillsSection.querySelector('ul');
 
@@ -42,20 +42,24 @@ messageForm.addEventListener ('submit', (e)=>{
     messageList.appendChild(newMessage);
     messageForm.reset();
 });
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul');
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/butolinka/repos');
-githubRequest.send();
-githubRequest.addEventListener('load', ()=>{
-    const repositories = JSON.parse(githubRequest.response);
-    const projectSection= document.getElementById('projects');
-    const progectList = projectSection.querySelector('ul');
+fetch('https://api.github.com/users/butolinka/repos')
+.then(response =>response.json())
+.then(repositories => {
     for(let i = 0; i < repositories.length; i+=1){
         const project = document.createElement('li');
         project.classList.add('project');
         const repositoryName = repositories[i].name;
         const capitilizeRepositoryName = repositoryName.charAt(0).toUpperCase() + repositoryName.slice(1);
         project.innerHTML='<a href="'+ repositories[i].html_url +'"target="_blank">' + capitilizeRepositoryName +'</a>';
-        progectList.appendChild(project);
+        projectList.appendChild(project);
     }
-});
+})
+.catch(error => {
+    const projectError= document.createElement('p');
+    projectError.classList.add('error');
+    projectError.textContent="Here is error in loading data. Please try again later";
+    projectList.appendChild(projectError);
+})
