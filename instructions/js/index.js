@@ -42,21 +42,24 @@ messageForm.addEventListener ('submit', (e)=>{
     messageList.appendChild(newMessage);
     messageForm.reset();
 });
-
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul');
 
 fetch('https://api.github.com/users/butolinka/repos')
 .then(response =>response.json())
-.then(data => githubRepositories(data))
-.catch(error => alert("Error in loading data. Try again later.", error))
-function githubRepositories(repositories){
-    const projectSection = document.getElementById('projects');
-    const progectList = projectSection.querySelector('ul');
+.then(repositories => {
     for(let i = 0; i < repositories.length; i+=1){
         const project = document.createElement('li');
         project.classList.add('project');
         const repositoryName = repositories[i].name;
         const capitilizeRepositoryName = repositoryName.charAt(0).toUpperCase() + repositoryName.slice(1);
         project.innerHTML='<a href="'+ repositories[i].html_url +'"target="_blank">' + capitilizeRepositoryName +'</a>';
-        progectList.appendChild(project);
+        projectList.appendChild(project);
     }
-}
+})
+.catch(error => {
+    const projectError= document.createElement('p');
+    projectError.classList.add('error');
+    projectError.textContent="Here is error in loading data. Please try again later";
+    projectList.appendChild(projectError);
+})

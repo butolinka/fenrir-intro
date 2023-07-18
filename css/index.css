@@ -154,6 +154,10 @@ span{
     font-size: 2.5rem;
     padding-left: 20px;
 }
+.error{
+    text-align: center;
+    margin: auto;
+}
 @media (max-width: 411px){
     section{
     width: 20rem;
