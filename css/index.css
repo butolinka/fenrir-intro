@@ -184,12 +184,14 @@ span{
     .nav-item{
         margin-bottom: 4px;
         margin-right: 0;
+        font-size: 0.7rem;
     }
     .nav-list{
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: center;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
     .project-list{
     height: auto;
@@ -199,10 +201,11 @@ span{
     }
     .navbar{
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
     .logo{
         padding-left: 15px;
+        font-size: 1rem;
     }
 }
 @media (min-width: 412px) and (max-width: 714px) {
